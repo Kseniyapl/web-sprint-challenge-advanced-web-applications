@@ -10,7 +10,7 @@ const View = (props) => {
     const [articles, setArticles] = useState([]);
     const [editing, setEditing] = useState(false);
     const [editId, setEditId] = useState();
-    const { push } = useHistory();
+   
 
     useEffect (() =>{
         articleService()
