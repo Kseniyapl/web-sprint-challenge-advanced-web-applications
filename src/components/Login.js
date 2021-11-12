@@ -46,6 +46,7 @@ const Login = () => {
             <h2>Please enter your account information.</h2>
             <div>
         <form onSubmit={handleSubmit}>
+        <Label htmlFor = "username"> Username </Label>
           <input
             id = "username"
             type="text"
@@ -53,6 +54,7 @@ const Login = () => {
             value={credentials.username}
             onChange={handleChange}
           />
+          <Label htmlFor = "username"> Password </Label>
           <input
             id="password"
             type="password"
@@ -62,8 +64,9 @@ const Login = () => {
           />
           <button id="submit">Log in</button>
         </form>
-        { error && <p id='error' >Please enter username and password!</p>}
+       { error && <p id='error' >Please enter username and password!</p>}
       </div>
+       
         </ModalContainer>
     </ComponentContainer>
     )
