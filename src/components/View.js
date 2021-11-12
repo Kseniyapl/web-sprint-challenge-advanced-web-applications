@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import articleService from '../services/articleServices';
 
 import Article from './Article';
 import EditForm from './EditForm';
@@ -8,6 +9,19 @@ const View = (props) => {
     const [articles, setArticles] = useState([]);
     const [editing, setEditing] = useState(false);
     const [editId, setEditId] = useState();
+
+    useEffect (() =>{
+        articleService()
+        .then(resp=>{
+            console.log(resp)
+            setArticles(resp.data)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+
+    })
+
 
     const handleDelete = (id) => {
     }

@@ -12,6 +12,3 @@ const PrivateRoute = ({component:Component, ...rest}) => {
 }
 
 export default PrivateRoute;
-
-//Task List:
-//1. Complete PrivateRoute
